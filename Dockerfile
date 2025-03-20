@@ -14,9 +14,11 @@ RUN apt-get update && apt-get install -y \
 
 # Copy the source code into the container
 COPY ok_api.cpp .
+COPY ok_api.h .
+COPY main.cpp .
 
 # Compile the C++ code
-RUN g++ -o ok_api ok_api.cpp -lcpprest -lboost_system -lboost_thread -lboost_chrono -lboost_random -lssl -lcrypto
+RUN g++ -o ok_api ok_api.cpp main.cpp -lcpprest -lboost_system -lboost_thread -lboost_chrono -lboost_random -lssl -lcrypto
 
 # Expose the port on which the API will listen
 EXPOSE 8080
