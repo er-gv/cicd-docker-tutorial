@@ -15,6 +15,6 @@ void OkAPI::start() {
 void OkAPI::handle_get(http_request request) {
     ucout << "Received GET request" << std::endl;
     json::value response;
-    response[U("message")] = json::value::string(U("Aharon Burr, sir, it's full of bugs!"));    request.reply(status_codes::OK, response);
+    response[U("message")] = json::value::string(U("Aharon Burr, sir, it's alive!!1"));    request.reply(status_codes::OK, response);
 }
 

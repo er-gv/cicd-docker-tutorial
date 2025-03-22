@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: ok-api-service
-          image: ergv/cicd-docker-tutorial
+          image: ergv/cicd-docker-tutorial:latest
           imagePullPolicy: Always
 ---
 apiVersion: v1
